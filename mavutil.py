@@ -365,7 +365,8 @@ class mavfile(object):
         if msg.type in (mavlink.MAV_TYPE_GCS,
                         mavlink.MAV_TYPE_GIMBAL,
                         mavlink.MAV_TYPE_ADSB,
-                        mavlink.MAV_TYPE_ONBOARD_CONTROLLER):
+                        mavlink.MAV_TYPE_ONBOARD_CONTROLLER,
+                        mavlink.MAV_TYPE_ODID):
             return False
         if msg.autopilot in frozenset([
                 mavlink.MAV_AUTOPILOT_INVALID
